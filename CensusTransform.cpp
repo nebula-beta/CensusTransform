@@ -32,6 +32,7 @@ void CensusTransform::Transform(const cv::Mat& image)
 
 
 	data_ = new DATATYPE[size];
+	data_ptr_ = std::shared_ptr<DATATYPE>(data_);
 	memset(data_, 0, size * sizeof(DATATYPE));
 
 	for(int y = 0; y < rows_; ++y)
@@ -63,6 +64,8 @@ void CensusTransform::Transform(const cv::Mat& image)
 		}
 	}
 }
+
+
 
 
 void CensusTransform::SetBitVal(int pos, int val)

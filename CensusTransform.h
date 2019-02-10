@@ -27,6 +27,7 @@ private:
 	int rows_;
 	int cols_;
 	DATATYPE* data_;
+	std::shared_ptr<DATATYPE> data_ptr_;
 		
 };
 
